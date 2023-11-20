@@ -1,0 +1,374 @@
+
+/* ----------------------------------------Global Code--------------------------------------- */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root{
+    --design-color:#0078FF;
+    --text-color:#4e4e4e;
+}
+/*---------------------------------------- Start Nav----------------------------------------- */
+.navbar ul li a{
+    position: relative;
+    transition: 3s all;
+}
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    bottom: -6px;
+    left: 0;
+}
+.navbar ul li a:hover::before{
+    width: 100%;
+    
+}
+.navbar .navbar-collapse ul li a{
+    color: white;
+}
+.navbar .navbar-collapse ul li{
+    padding: 0 10px;
+    font-size: 20px;
+}
+.navbar ul li .active{
+    border-bottom: 3px solid white;
+}
+@media screen and (max-width:992px){
+    #navbarNavDropdown .navbar-nav{
+        display: none;
+    }
+}
+/* ----------------------------------------End Nav -----------------------------------------*/
+
+
+/* ----------------------------------------Start Home -----------------------------------------*/
+.home{
+    height: calc(100vh - 56px);
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.home h1{
+    font-size: 70px;
+}
+.home .lay-out{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#home .playing::after{
+    content: " | ";
+    animation: typing 3s infinite;
+
+}
+@keyframes typing{
+    0%{content: 'f |';}
+    3%{content: 'fr |';}
+    6%{content: 'fre |';}
+    9%{content: 'free |';}
+    12%{content: 'freel |';}
+    15%{content: 'freela |';}
+    18%{content: 'freelan |';}
+    21%{content: 'freelanc |';}
+    24%{content: 'freelance |';}
+    27%{content: 'freelancer |';}
+    28%{content: 'freelancer |';}
+    29%{content: 'freelancer |';}
+    30%{content: 'freelance |';}
+    33%{content: 'freelanc |';}
+    36%{content: 'freelan|';}
+    39%{content: 'freela |';}
+    42%{content: 'freel |';}
+    45%{content: 'free |';}
+    48%{content: 'fre |';}
+    51%{content: 'fr |';}
+    54%{content: 'f |';}
+    57%{content: 'E |';}
+    60%{content: 'ES |';}
+    63%{content: 'Ess |';}
+    66%{content: 'Essa |';}
+    69%{content: 'Essam |';}
+    /* 72%{content: 'Essa |';}
+    75%{content: 'Ess |';}
+    79%{content: 'Es |';}
+    82%{content: ' E|';} */
+    85%{content: ' Essam|';}
+    88%{content: 'Essam |';}
+    91%{content: 'Essam |';}
+    94%{content: 'Essam |';}
+    97%{content: ' Essam|';}
+    100%{content: 'Essam |';}
+}
+/* ----------------------------------------End Home -----------------------------------------*/
+
+
+/* ----------------------------------------Start About -----------------------------------------*/
+.about{
+    background-color: #F5F5F5;
+
+}
+.about .skill .progress{
+    max-width:30rem;
+}
+.about .skill .progress .progress-bar{
+    /* width: 85%; */
+    background-color: var(--design-color);
+}
+.about .before{
+    position: relative;
+}
+.about .before::after{
+    content: '';
+    position: absolute;
+    width: 6rem;
+    height: 3px;
+    background-color:var(--design-color);
+    bottom: -10px;
+    left: 0;
+}
+.about .one{
+    max-width: 50%;
+}
+/* ----------------------------------------End About -----------------------------------------*/
+
+/* ----------------------------------------Start  Services -----------------------------------------*/
+.services{}
+.services .title{
+    position: relative;
+    margin-bottom: 3rem;
+ }
+ .services .title::after{
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: var(--design-color);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+.services h2{
+    font-size: 60px;
+    font-weight: bold;
+}
+.services .circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--design-color);
+    margin: auto;
+}
+.services .circle:hover{
+    border: 10px solid #0077ff3d;
+    
+}
+
+.services .circle i{
+ transform: translate(-4%, 20%);
+}
+#services .circle{
+    transition: 0.5s;
+}
+#services .papa:hover .circle{
+    background-color: #0078FF;
+    border: 10px solid #C1DBF8;
+}
+
+/* ----------------------------------------End  Services -----------------------------------------*/
+
+/* ----------------------------------------Start Counter -----------------------------------------*/
+.counter{
+    background-image: url(../images/counters-bg.jpg);
+    height: 50vh;
+    
+    
+}
+.counter .layer{
+    background-color: rgba(0, 120,255 , 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.counter .icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid #CDE1F8;
+    color: white;
+    font-size: 20px;
+}
+.counter .icon i{
+    transform: translate(21px,14px);
+}
+.counter .row{
+    transform: translateY(65%);
+    
+}
+/* ----------------------------------------End Counter -----------------------------------------*/
+
+/* ----------------------------------------Start  Portfolio -----------------------------------------*/
+.portfolio .text{
+    position: relative;
+}
+.portfolio .text h2{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.portfolio .text::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: var(--design-color);
+    bottom: -15px;
+    transform: translate(-50% , -50%);
+}
+.portfolio .icon{
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--design-color);
+    border-radius: 50%;
+     
+
+}
+.portfolio i{
+    margin-left: 20px;
+    transform: translate(-63%, 22%);
+    font-size: 25px;
+    color: var(--design-color);
+
+}
+.portfolio .work{
+    color: var(--design-color);
+}
+.portfolio figure{
+    overflow: hidden;
+}
+
+.portfolio .card img{
+    transition: 1s all;
+    overflow: hidden;
+}
+.portfolio .card img:hover{
+    transform: scale(1.3);
+    
+}
+/* ----------------------------------------End  Portfolio -----------------------------------------*/
+
+/* ----------------------------------------Start Testimonials -----------------------------------------*/
+
+
+#carouselExampleCaptions .carousel-item{
+    margin: 100px 0;
+  
+}
+
+#carouselExampleCaptions .carousel-item{
+    padding: 70px 0;
+}
+#carouselExampleCaptions{
+   background-image: url(../images/overlay-bg.jpg);
+   background-position: center;
+   background-size: cover; 
+}
+#carouselExampleCaptions .layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 125, 255, 0.7);
+}
+
+/* ----------------------------------------End Testimonials -----------------------------------------*/
+
+/* ----------------------------------------Start  Blog -----------------------------------------*/
+.blog .title{
+    position: relative;
+}
+.blog .title::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: var(--design-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.blog .title-buttom img{
+    width: 40px;
+}
+
+.blog .text .model{
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    background-color: var(--design-color);
+    border-radius: 6px;
+
+}
+
+/* ----------------------------------------End  Blog -----------------------------------------*/
+
+/* ----------------------------------------Start  Contact -----------------------------------------*/
+.contact{
+    background-color: rgba(0, 125, 255, 0.9);
+}
+.contact .title{
+    position: relative;
+}
+.contact .title::after{
+    position: absolute;
+    content: '';
+    width: 95px;
+    height: 4px;
+    background-color: var(--design-color);
+    left: 0;
+    bottom: -15px;
+
+}
+.contact .button{
+    margin-left: 40%;
+}
+.contact .button button{
+    padding: 15px 20px;
+}
+.contact .title2{
+    position: relative;
+}
+.contact .title2::after{
+    position: absolute;
+    content: '';
+    width: 95px;
+    height: 4px;
+    background-color: var(--design-color);
+    left: 0;
+    bottom: -15px;
+}
+/* .contact .social i{
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--design-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+} */
+/* ----------------------------------------End  Contact -----------------------------------------*/
+
+
+
+/* ----------------------------------------Start  Footer -----------------------------------------*/
+
+/* ----------------------------------------End  Footer -----------------------------------------*/
